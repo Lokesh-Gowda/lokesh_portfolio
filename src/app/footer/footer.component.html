@@ -1,0 +1,74 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Loki's Logic</h2>
+        <div class="d-flex">
+            <button routerLink="/home" class="btn btn-primary">Home</button>
+            <button routerLink="/about" class="btn btn-primary">About</button>
+            <button routerLink="/contact" class="btn btn-primary">Contact</button>
+            <button routerLink="/course" class="btn btn-primary">Skills</button>
+            <button routerLink="/project" class="btn btn-primary">Project</button>
+            <button routerLink="/login" class="btn btn-danger mx-3">LogOut</button>
+        </div>
+    </div>
+</nav>
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Loki's Skill</h1>
+        <h3 class="col-md-8 fs-4">Click the below button to see My Skills. </h3>
+        <br>
+        <div *ngIf="ShowMoreContents" class="col-md-8 fs-4">
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sl.No.</th>
+                        <th>Skill</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>HTML 5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>CSS 3</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bootstrap</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>TypeScript</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Angular</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Core Java</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Oracle Database</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Git and Github</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> <br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            [ngClass]="ShowMoreContents ? 'btn-primary':'btn-secondary'" (click)="toggleContent()">
+            {{btnName}}
+        </button>
+    </div>
+</div>

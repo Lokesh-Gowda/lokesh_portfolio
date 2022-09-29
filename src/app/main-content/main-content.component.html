@@ -1,0 +1,129 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2>Loki's Logic</h2>
+    <div class="d-flex">
+      <button routerLink="/home" class="btn btn-primary">Home</button>
+      <button routerLink="/about" class="btn btn-primary">About</button>
+      <button routerLink="/contact" class="btn btn-primary">Contact</button>
+      <button routerLink="/course" class="btn btn-primary">Skills</button>
+      <button routerLink="/project" class="btn btn-primary">Project</button>
+      <button routerLink="/signup" class="btn btn-light mx-3">SignUp</button>
+      <button routerLink="/login" class="btn btn-success mx-3">LogIn</button>
+      <button routerLink="/login" class="btn btn-danger mx-3">LogOut</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-4">
+  <!-- <img src="../../assets/lokipto.jpeg" alt=""> -->
+  <div class="container-fluid py-4">
+    <div class="wrapper">
+      <h1>Loki's Logic Center</h1>
+    </div>
+    <p class="col-md-8 fs-2 fw-bold">Without Logic There Is No Magic</p>
+    <p class="col-md-8 fs-4">Give your valuable Feedback for my Angular Web Page.</p>
+    <button type="button" (click)="clickAddedDetail()" class="btn btn-primary" data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop">Add Details</button>
+  </div>
+</div>
+
+<!-- User details table -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Company Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile No</th>
+      <th scope="col">FeedBack</th>
+      <th scope="col">Actions</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of allUserData">
+      <td>{{data.id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.coname}}</td>
+      <td>{{data.mobile}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.feedback}}</td>
+      <td>
+        <div type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+          (click)="onEditeDetails(data)">Edit</div>&nbsp;
+        <div class="btn btn-danger" (click)=" deleteDetails(data)">Delete</div>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Add Details Here!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="InputName" class="form-label">User Name</label>
+            <input type="text" formControlName="name" class="form-control" id="InputName" placeholder="Enter Your Name"
+              aria-describedby="emailHelp">
+            <div *ngIf="formValue.get('name')?.invalid && formValue.get('name')?.touched"
+              class="form-text text-warning">Please enter valid User Name!
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="InputName" class="form-label">Company Name</label>
+            <input type="text" formControlName="coname" class="form-control" id="InputName"
+              placeholder="Enter Your Company Name" aria-describedby="emailHelp">
+            <!-- <div *ngIf="formValue.get('coname')?.invalid && formValue.get('coname')?.touched"
+                    class="form-text text-warning">Please enter valid Company Name!
+                </div> -->
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+              placeholder="Enter Your Email Id" aria-describedby="emailHelp">
+            <div *ngIf="formValue.get('email')?.invalid && formValue.get('email')?.touched"
+              class="form-text text-warning">Please enter valid Email Id!
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Mobile No</label>
+            <input type="text" formControlName="mobile" class="form-control" id="exampleInputEmail1"
+              placeholder="Enter Your Mobile no" aria-describedby="emailHelp">
+            <div *ngIf="formValue.get('mobile')?.invalid && formValue.get('mobile')?.touched"
+              class="form-text text-warning">Please enter valid Mobile No!
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="InputName" class="form-label">Feed Back</label>
+            <input type="text" formControlName="feedback" class="form-control" id="InputName"
+              placeholder="Enter Your FeedBack" aria-describedby="emailHelp">
+            <!-- <div *ngIf="formValue.get('feedback')?.invalid && formValue.get('feedback')?.touched"
+                    class="form-text text-warning">Please enter valid Mobile No!
+                </div> -->
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Clear</button>
+        <button type="button" *ngIf="showEdit" class="btn btn-primary" (click)="updateDetails()">Update</button>
+        <button type="button" [disabled]="formValue.invalid" *ngIf="showAdd" class="btn btn-primary"
+          (click)="addDetails()">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

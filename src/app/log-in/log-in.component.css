@@ -1,0 +1,23 @@
+.card {
+    margin-top: 5px;
+    border: 1px solid blue;
+    width: 550px;
+    padding: 45px;
+    position: absolute;
+    top: 10%;
+    left: 27%;
+}
+
+.card {
+    /* background: rgb(212, 152, 152); */
+    height: 500px;
+    width: 500px;
+    border: solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source:
+        linear-gradient(27deg,
+            red,
+            #b16ec4,
+            #5f97b9);
+}

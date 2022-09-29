@@ -1,0 +1,35 @@
+.wrapper {
+    height: 100px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.wrapper h1 {
+    margin: 0;
+    font-size: 100px;
+    color: rgba(225, 225, 225, 0.01);
+    background-image: url("../../assets/lokipto.jpeg");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 21s ease-in-out infinite;    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+@keyframes animate{
+    0%,
+    100%{
+        background-position: left top;
+    }
+    25%{
+        background-position: right bottom;
+    }
+    50%{
+        background-position: left bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+}

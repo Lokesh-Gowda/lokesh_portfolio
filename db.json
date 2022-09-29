@@ -1,0 +1,89 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Lokesh",
+      "coname": "Loki's Logic Center",
+      "mobile": "8073344261",
+      "email": "lokeshga123@gmail.com",
+      "feedback": "Amazing!!!"
+    },
+    {
+      "id": 2,
+      "name": "Lokiii",
+      "coname": "FreeLancer",
+      "mobile": "9876543120",
+      "email": "lokeshga123@gmail.com",
+      "feedback": "Very Nice"
+    }
+  ],
+  "signup": [
+    {
+      "name": "lokesh",
+      "mobile": "9876543210",
+      "email": "ufudfb@dnf",
+      "password": "123456789",
+      "id": 1
+    },
+    {
+      "name": "",
+      "mobile": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "Arjun",
+      "mobile": "9876543210",
+      "email": "arjun@gmail.com",
+      "password": "1234567890",
+      "id": 3
+    },
+    {
+      "name": "231184314914",
+      "mobile": "qqe9ue0q9ru8q0",
+      "email": "qoehwoufh",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "name": "l",
+      "mobile": "8812367129",
+      "email": "oifhbuodgfbu",
+      "password": "obgfoefboewrhbfoubf",
+      "id": 5
+    },
+    {
+      "name": "loki",
+      "mobile": "9876543213",
+      "email": "arjun@gmail.com",
+      "password": "loki@21gegbg",
+      "id": 6
+    },
+    {
+      "name": "lokesh",
+      "mobile": "9234567890",
+      "email": "arjun@gmail.com",
+      "password": "0987654321",
+      "id": 7
+    },
+    {
+      "name": "ramesh",
+      "mobile": "9876456242",
+      "email": "ramesh@gmail.com",
+      "password": "ramesh123",
+      "id": 8
+    },
+    {
+      "name": "lokesh",
+      "mobile": "9873457534",
+      "email": "loki@gmail.com",
+      "password": "134241245",
+      "id": 9
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

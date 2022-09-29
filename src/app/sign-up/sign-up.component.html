@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row ">
+        <div class="col-md-6 ">
+            <div class="card">
+                <div class="text-center">
+                    <h1>User Signup</h1>
+                    <hr>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input formControlName="name" placeholder="Enter Name!" type="text" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched"
+                            class="form-text text-warning">Please enter valid User Name!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Mobile No.</label>
+                        <input formControlName="mobile" placeholder="Enter Mobile No!" type="text" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div *ngIf="signupForm.get('mobile')?.invalid && signupForm.get('mobile')?.touched"
+                            class="form-text text-warning">Please enter valid Mobile No!
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Id.</label>
+                        <input formControlName="email" placeholder="Enter Email Id!" type="email" class="form-control"
+                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched"
+                            class="form-text text-warning">Please enter valid Email Id!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input formControlName="password" placeholder="Enter Password!" type="password"
+                            class="form-control" id="exampleInputPassword1">
+                        <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched"
+                            class="form-text text-warning">Please enter valid Password!</div>
+                    </div>
+                    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Signup</button>
+                </form>
+                <a style="color: blue; margin-top:10px;" routerLink="/login">Already Member? Click to Login !</a>
+            </div>
+        </div>
+    </div>
+</div>

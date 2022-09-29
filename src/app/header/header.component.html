@@ -1,0 +1,43 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Loki's Logic</h2>
+        <div class="d-flex">
+            <button routerLink="/home" class="btn btn-primary">Home</button>
+            <button routerLink="/about" class="btn btn-primary">About</button>
+            <button routerLink="/contact" class="btn btn-primary">Contact</button>
+            <button routerLink="/course" class="btn btn-primary">Skills</button>
+            <button routerLink="/project" class="btn btn-primary">Project</button>
+            <button routerLink="/login" class="btn btn-danger mx-3">LogOut</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <div class="wrapper">
+            <h1 class="display-5 fw-bold">About Loki's Logic</h1>
+        </div>
+        <h3 class="col-md-8 fs-4">This is a Portfolio web page. </h3>
+
+
+        <br>
+        <div *ngIf="ShowMoreContents" class="col-md-8 fs-4">
+            <P>A aspiring Angular web developer. I'm ready to develop dynamic and responsive web sites using Angular 12+
+                and I
+                have good creative, problem solving and logical solution for any problems or situations related to web
+                developing.
+            </P>
+
+            <p>I.m basicaly Civil Engineer backgroud and i had worked 3 years on that sector due to the passionate about
+                software and IT sector and also for self growth purpose I shifted to IT sector now.</p>
+            <p>I finished my IT course in Besant Technologies upto 5 months and I learned Java full stack development
+            </p>
+            <br>
+        </div> <br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            [ngClass]="ShowMoreContents ? 'btn-primary':'btn-secondary'" (click)="toggleContent()">
+            {{btnName}}
+        </button>
+    </div>
+</div>

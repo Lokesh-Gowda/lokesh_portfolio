@@ -1,0 +1,71 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h2>Loki's Logic</h2>
+        <div class="d-flex">
+            <button routerLink="/home" class="btn btn-primary">Home</button>
+            <button routerLink="/about" class="btn btn-primary">About</button>
+            <button routerLink="/contact" class="btn btn-primary">Contact</button>
+            <button routerLink="/course" class="btn btn-primary">Skills</button>
+            <button routerLink="/project" class="btn btn-primary">Project</button>
+            <button routerLink="/login" class="btn btn-danger mx-3">LogOut</button>
+        </div>
+    </div>
+</nav>
+<!-- Jumbotron -->
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">About This Project</h1>
+        <h3 class="col-md-8 fs-4">This is a Portfolio web page. Build from scratch using Angular. </h3>
+        <br>
+        <hr>
+        <div *ngIf="ShowMoreContents" class="col-md-8 fs-4">
+            <h6 class="col-md-8 fs-4">Methods/Property Used in this project:</h6>
+           <p>
+            => Generated the components, services, pipes
+           </p>
+           <p>
+            => Using Bootstrap modal and forms
+           </p>
+           <p>
+            => Install the JSON server to the project for storing the data
+           </p>
+           <p>
+            => imported the Reactive form, FormControl, Formgroup, Formbuilder, validators, HttpClient, HttpClientModule, ApiService,
+           </p>
+           <p>
+            => Used Binding( string interpolation, Property, Event, Two-way binding )
+           </p>
+           <p>
+            => Used Directives( *ngIf, [ngClass], [ngStyle], *ngFor )
+           </p>
+           <p>
+            => Used Life cycle hooks
+           </p>
+           <p>
+            => Used Subscribe method to map the data
+           </p>
+           <p>
+            => Used Router, routerLink to navigate the pages
+           </p>
+           <hr>
+           <h6 class="col-md-8 fs-4">Steps/procedure Used in this project:</h6>
+           <p>Created a Modal and Form by using Bootstrap for the Feedback Form</p>
+           <p>Added the HttpClientModule in app.module.ts for communicating HttpClient</p>
+           <p>Generated the services using CLI - ng g s service_name to interact b/w Http methods </p>
+           <p>Created a Model for all data type</p>
+           <p>Then created object for posting data to json server</p>
+           <p>Then imported the ApiService</p>
+           <p>Then Subscribing our data which is maped via services</p>
+           <p>Created login and signup components using CLI</p>
+           <p>Created Routing for the project</p>
+           <p>Created register array of object for storing data</p>
+           <p>Fire API and methods for storing data in JSON file</p>
+           <p>Created Login system</p>
+           <p>Created Home,ABout,Contact,Course,Project pages using routerLink and added the neccessary details </p>
+        </div> <br>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            [ngClass]="ShowMoreContents ? 'btn-primary':'btn-secondary'" (click)="toggleContent()">
+            {{btnName}}
+        </button>
+    </div>
+</div>
